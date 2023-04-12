@@ -10,6 +10,7 @@ const notFound = require("./middleware/not-found");
 const productRouter = require("./routes/products");
 
 // middleware
+app.use(express.static("./public"));
 app.use(express.json());
 
 app.use("/api/v1/products", productRouter);
